@@ -1,6 +1,8 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 
 const TopNav = () => {
+  const [search, setSearch] = useState("");
+
   return (
     <Fragment>
       <header className="header" id="site-header">
@@ -9,10 +11,16 @@ const TopNav = () => {
         </div>
 
         <div className="header-content-wrapper">
-          <form className="search-bar w-search notification-list friend-requests">
+          <form className="search-bar w-search notification-list friend-requests" onSubmit={e => this.handleSubmit(e)}>
             <div className="form-group with-button">
-              <input className="form-control js-user-search" placeholder="Search here people or pages..." type="text" />
-              <button>
+              <input
+                className="form-control js-user-search"
+                value={search}
+                placeholder="Search here people or pages..."
+                type="text"
+                onChange={e => setSearch(e.target.value)}
+              />
+              <button type="submit">
                 <svg className="olymp-magnifying-glass-icon"></svg>
               </button>
             </div>

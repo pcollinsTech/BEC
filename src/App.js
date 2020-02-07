@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "./logo.svg";
 // import "./assets/sass/main.scss";
 import Layout from "./layout/Layout";
 
@@ -7,7 +6,6 @@ function App() {
   return (
     <Layout>
       <div className="container register">
-        <div style={{ marginTop: "200px", paddingTop: "200px" }}></div>
         <div className="row">
           <div className="col-md-3 register-left">
             <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt="" />
